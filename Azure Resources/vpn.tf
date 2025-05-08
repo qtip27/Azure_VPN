@@ -106,16 +106,16 @@ module "aws_vpn" {
   rule = [
     {
       name = "aws_rule1"
-      source_addresses = ["45.145.0.0/24",]
+      source_addresses = ["",]
       destination_ports = ["443","80",]
-      destination_addresses = ["10.45.1.0/24","100.185.2.0/24",]
+      destination_addresses = ["","",]
       protocols = ["TCP"]
     },
     {
       name = "aws_rule2"
-      source_addresses = ["10.45.1.0/24","100.185.2.0/24",]
+      source_addresses = ["","",]
       destination_ports = ["443","80",]
-      destination_addresses = ["45.145.0.0/24",]
+      destination_addresses = ["",]
       protocols = ["TCP"]
     }
   ]
@@ -123,7 +123,7 @@ module "aws_vpn" {
   #Route Table
   rt_name = "Vnet-Route"
   route_name = "vpn_route"
-  address_prefix = "10.123.0.128/26"
+  address_prefix = ""
   hop_address = module.aws_vpn.private
 
   #Route Table Assoc.
@@ -140,12 +140,12 @@ module "aws_vpn" {
   use_remote_gateways          = false
 
   #Local Network Gateway 
-  lng = true
+  lng = false
   lng_name = "AWS-Local"
-  gw_address = "3.136.144.63" #Local IP of AWS
+  gw_address = "" #Local IP of AWS
 
   #Local Connection
-  vpn_connection = true
+  vpn_connection = false
   lng_conn = "Azure-AWS"
   secret = "TunnelKey"
   gateway = module.aws_vpn.gw_id
