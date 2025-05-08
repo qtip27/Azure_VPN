@@ -156,6 +156,6 @@ module "aws_vpn" {
   #East US VM
   custom = filebase64("customdata.tpl")
   user = "adminuser"
-  file = file("~/.ssh/hunterazurekey.pub")
+  file = file("")
   nic_subnet = module.aws_vpn.east_subnet
 }
