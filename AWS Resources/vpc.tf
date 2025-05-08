@@ -4,14 +4,14 @@
 
 module "vpc" {
   source     = "./module/vpc"
-  ip_address = "10.45.0.0/16"
+  ip_address = ""
   tags       = "Dev"
 }
 
 module "subnet_public" {
   source     = "./module/subnet"
   vpc_id = module.vpc.vpc_id
-  cidr = "10.45.1.0/24"
+  cidr = ""
   public = true
   availability = "us-east-2a"
   tag       = "dev-public-1"
@@ -20,7 +20,7 @@ module "subnet_public" {
 module "subnet_private" {
   source     = "./module/subnet"
   vpc_id = module.vpc.vpc_id
-  cidr = "10.45.2.0/24"
+  cidr = ""
   availability = "us-east-2a"
   tag       = "dev-private-1"
 }
@@ -28,7 +28,7 @@ module "subnet_private" {
 module "subnet_public_1" {
   source     = "./module/subnet"
   vpc_id = module.vpc.vpc_id
-  cidr = "10.45.3.0/24"
+  cidr = ""
   public = true
   availability = "us-east-2a"
   tag       = "dev-public-2"
@@ -37,7 +37,7 @@ module "subnet_public_1" {
 module "subnet_private_1" {
   source     = "./module/subnet"
   vpc_id = module.vpc.vpc_id
-  cidr = "10.45.5.0/24"
+  cidr = ""
   availability = "us-east-2a"
   tag       = "dev-private-2"
 }
@@ -65,14 +65,14 @@ module "routetable_dev" {
 
 module "vpc_prod" {
   source     = "./module/vpc"
-  ip_address = "100.185.0.0/16"
+  ip_address = ""
   tags       = "Prod"
 }
 
 module "subnet_public_prod" {
   source     = "./module/subnet"
   vpc_id = module.vpc_prod.vpc_id
-  cidr = "100.185.2.0/24"
+  cidr = ""
   public = true
   availability = "us-east-2a"
   tag       = "dev-public-100"
@@ -86,7 +86,7 @@ module "subnet_public_prod" {
 module "subnet_private_prod" {
   source     = "./module/subnet"
   vpc_id = module.vpc_prod.vpc_id
-  cidr = "100.185.4.0/24"
+  cidr = ""
   availability = "us-east-2a"
   tag       = "dev-private-101"
 }
