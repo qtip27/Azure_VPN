@@ -168,7 +168,7 @@ resource "azurerm_local_network_gateway" "aws_local" {
   resource_group_name = var.rg_name 
   location            = var.location 
   gateway_address     = var.gw_address 
-  address_space       = ["10.45.0.0/16", "100.185.0.0/16"]
+  address_space       = ["", ""] #IP Addresses of AWS or On-Premise
 }
 
 resource "azurerm_virtual_network_gateway_connection" "aws_connection" {
@@ -204,7 +204,7 @@ resource "azurerm_virtual_network" "east-vnet" {
   name                = "east-network"
   resource_group_name = var.east_rg 
   location            = var.east_location 
-  address_space       = ["45.145.0.0/24"]
+  address_space       = [""]
 
   tags = {
     environment = "east-us"
@@ -215,7 +215,7 @@ resource "azurerm_subnet" "east-subnet" {
   name                 = "east-us-subnet"
   resource_group_name = var.east_rg 
   virtual_network_name = azurerm_virtual_network.east-vnet.name
-  address_prefixes     = ["45.145.0.0/26"]
+  address_prefixes     = [""]
 }
 
 resource "azurerm_linux_virtual_machine" "east_vm" {
