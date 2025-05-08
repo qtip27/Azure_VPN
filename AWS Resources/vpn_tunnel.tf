@@ -4,7 +4,7 @@ module "vpn_tunnel" {
   asn = "64512"
 
   #Customer Gateway
-  customer_ip = "130.131.176.158" #IP Address from Azure VNG
+  customer_ip = "" #IP Address from Azure VNG
 
   #VPN Connetion
   vpn_connection = false
