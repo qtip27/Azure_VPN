@@ -16,7 +16,7 @@ The article details the steps involved in establishing secure VPN connectivity b
 
 ## Article Link
 
-[YOUR_ARTICLE_LINK_HERE](https://medium.com/@cloudsecguy97/establishing-a-secure-hybrid-network-connecting-on-premise-infrastructure-to-azure-with-vpn-59e7a9c78c9b)
+[Medium Article](https://medium.com/@cloudsecguy97/establishing-a-secure-hybrid-network-connecting-on-premise-infrastructure-to-azure-with-vpn-59e7a9c78c9b)
 
 ## Overview
 
