@@ -1,6 +1,6 @@
 # Establishing a Secure Hybrid Network: Connecting On-Premise Infrastructure to Azure with VPN Gateway
 
-This repository provides resources and information related to the article "[Cloud-to-cloud VPN connectivity between Azure and AWS using VPN Gateway](YOUR_ARTICLE_LINK_HERE)".
+This repository provides resources and information related to the article "[Establishing a Secure Hybrid Network: Connecting On-Premise Infrastructure to Azure with VPN Gateway](https://medium.com/@cloudsecguy97/establishing-a-secure-hybrid-network-connecting-on-premise-infrastructure-to-azure-with-vpn-59e7a9c78c9b))".
 
 The article details the steps involved in establishing secure VPN connectivity between Microsoft Azure and Amazon Web Services (AWS) using their respective VPN Gateway services. This allows for secure communication and resource sharing between the two cloud environments.
 
@@ -16,7 +16,7 @@ The article details the steps involved in establishing secure VPN connectivity b
 
 ## Article Link
 
-[YOUR_ARTICLE_LINK_HERE](YOUR_ARTICLE_LINK_HERE)
+[[YOUR_ARTICLE_LINK_HERE](YOUR_ARTICLE_LINK_HERE](https://medium.com/@cloudsecguy97/establishing-a-secure-hybrid-network-connecting-on-premise-infrastructure-to-azure-with-vpn-59e7a9c78c9b))
 
 ## Overview
 
